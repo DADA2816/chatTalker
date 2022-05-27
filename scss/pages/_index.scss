@@ -1,0 +1,459 @@
+.index{
+    .background{
+        position: relative;
+        &-yellow{
+            background: url(../img/bg_home.svg);
+            @include bg-img-set;
+            width: 851px;
+            height: 768px;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            @include pad{
+                background: url(../img/bg_home_sm.svg);
+                width: 347px;
+                height: 255px;
+                top: 391px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+        &-leftCycle{
+            background: url(../img/ball01.svg);
+            @include bg-img-set;
+            width: 360px;
+            height: 360px;
+            position: absolute;
+            top: 589px;
+            left: -222px;
+            z-index: -1;
+            overflow: hidden;
+            @include pad{
+                width: 126px;
+                height: 126px;
+                top: 743px;
+                left: -77px;
+            }
+        }
+        &-rightCycle{
+            background: url(../img/ball02.svg);
+            @include bg-img-set;
+            background-position: left;
+            background-size: cover;
+            position: absolute;
+            width: 210px;
+            height: 310px;
+            z-index: -10;
+            top: 1693px;
+            right: 0;
+            @include mob{
+                @include bg-img-set;
+                background-position: left;
+                background-size: cover;
+                width: 88px;
+                height: 135px;
+                top: 3067px;
+                left: 287px;
+            }
+        }
+        &-bottomCycle{
+            background: url(../img/ball03.svg);
+            @include bg-img-set;
+            background-size: cover;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            z-index: -10;
+            top: 2640px;
+            left: 50px;
+            @include mob{
+                width: 153px;
+                height: 153px;
+                top: 4827px;
+                left: -76px;
+            }
+        }
+        &-main{
+            background: url(../img/home.svg);
+            @include bg-img-set;
+            width: 532px;
+            height: 534px;
+            z-index: 2;
+            @include xl-pc{
+                width: 432px;
+                height: 434px;
+            }
+            @include pad{
+                width: 304px;
+                height: 305px;
+                margin-top: 32px;
+            }
+        }
+        &-footer{
+            background: url(../img/home_footer.svg);
+            @include bg-img-set;
+            height: 384px;
+            position: relative;
+            margin: 100px 0 119px;
+            @include pad{
+                background-size: cover;
+                height: 461px;
+                margin: 60px 0;
+            }
+        }
+    }
+
+    .banner{
+        margin-top: 30px;
+        padding: 0 32px;
+        @include pad{
+            flex-direction: column;
+        }
+        span{
+            font-size: $font-size-lg;
+            line-height: 26px;
+            color: $primary;
+            @include pad{
+                margin-top: 32px;
+            }
+        }
+        h2{
+            @include font-h2;
+            margin-top: 8px;
+            @include lg-pc{
+                font-size: 40px;
+            }
+            @include mob{
+                font-size: 32px;
+                line-height: 46px;
+            }
+        }
+        p{
+            font-size: $font-size-xl;
+            line-height: 29px;
+            margin-top: 16px;
+        }
+    }
+
+    .platform{
+        margin-top: 280px;
+        padding: 0 60px;
+        @include lg-pc{
+            padding: 0 20px;
+        }
+        @include pad{
+            margin-top: 100px;
+        }
+        h3{
+            @include font-h3;
+            @include mob{
+                font-size: 28px;
+                line-height: 40px;
+                margin-bottom: 8px;
+            }
+        }
+        ul{
+            flex-wrap: wrap;
+        }
+        li{
+            width: 250px;
+            @include pad{
+                width: 100%;
+            }
+        }
+        img{
+            width: 90px;
+            height: 90px;
+            margin: 48px 0 24px;
+            @include mob{
+                width: 60px;
+                height: 60px;
+                margin:24px 0 16px;
+            }
+        }
+        h4{
+            font-size: $font-size-h4;
+            line-height: 35px;
+            @include mob{
+                font-size: $font-size-lg;
+                line-height: 26px;
+            }
+        }
+        p{
+            line-height: 24px;
+            color: $dark-grey;
+            margin-top: 24px;
+            @include mob{
+                margin-top: 16px;
+            }
+        }
+    }
+
+    .roles{
+        margin-top: 100px;
+        @include pad{
+            padding:0 20px;
+            margin-top: 60px;
+        }
+        h3{
+            @include font-h3;
+            @include mob{
+                font-size: 28px;
+                line-height: 40px;
+            }
+        }
+        .sub-title{
+            font-size: $font-size-xl;
+            line-height: 29px;
+            margin: 16px 0 48px;
+            @include mob{
+                font-size: $font-size-lg;
+                line-height: 26px;
+                margin: 16px 0 20px;
+            }
+        }
+        ul{
+            justify-content: space-between;
+            @include lg-pc{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        li{
+            width: 260px;
+            @include xl-pc{
+                padding: 8px;
+            }
+            @include lg-pc{
+                margin: 12px;
+                width: 40%;
+            }
+            @include pad{
+                width: 80%;
+            }
+        }
+        img{
+            display: block;
+            border-radius: 12px 12px 0px 0px;
+        }
+        .content{
+            background-color: $white;
+            border-radius: 0px 0px 12px 12px;
+            box-shadow: 0px 2px 10px #00000014;
+            padding: 16px;
+            height: 128px;
+            @include xl-pc{
+                height: 150px;
+            }
+            @include lg-pc{
+                height: auto;
+            }
+            h4{
+                line-height: 24px;
+                color: $primary;
+            }
+            p{
+                line-height: 24px;
+                margin-top: 16px;
+            }
+        }
+    }
+
+    .intro{
+        margin-top: 72px;
+        padding-right: 49px;
+        @include lg-pc{
+            flex-direction: column-reverse;
+            padding:0 20px;
+            margin-top: 60px;
+        }
+        ul{
+            width: 507px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include lg-pc{
+                width: 100%;
+                justify-content: center;
+            }
+            li{
+                background: $white;
+                width: 230px;
+                border-radius: 12px;
+                box-shadow: 0px 2px 10px #00000014;
+                padding: 32px 32px 48px;
+                margin-top: 28px;
+                @include lg-pc{
+                    width: 40%;
+                    margin: 16px;
+                }
+                @include pad{
+                    width: 70%;
+                }
+            }
+            h4{
+                font-size: $font-size-lg;
+                line-height: 26px;
+                margin-top: 24px;
+            }
+            p{
+                line-height: 24px;
+                margin-top: 16px;
+            }
+        }
+        .cycle{
+            background: $white;
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 10px #00000014;
+            position: relative;
+            img{
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .content {
+            @include lg-pc{
+                text-align: center;
+            }
+            h3{
+                @include font-h3;
+                @include mob{
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+            }
+            p{
+                font-size: $font-size-lg;
+                line-height: 26px;
+                margin-top: 16px;
+            }
+        }
+        .btn{
+            background: $primary;
+            color: $white;
+            width: 136px;
+            border-radius: 27px;
+            transition: all 0.5s;
+            padding: 12px 32px;
+            margin-top: 24px;
+            &:hover{
+                background: $secondary;
+            }
+            @include lg-pc{
+                margin: 16px auto;
+            }
+        }
+    }
+
+    .comment{
+        margin-top: 100px;
+        @include lg-pc{
+            padding:0 20px;
+            margin-top: 60px;
+        }
+        h3{
+            @include font-h3;
+            @include mob{
+                font-size: 28px;
+                line-height: 40px;
+            }
+        }
+        li{
+            background: $white;
+            width: 352px;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0px 2px 10px #00000014;
+            padding: 48px 32px 16px;
+            margin-top: 104px;
+            @include pad{
+                width: 100%;
+                margin-top: 88px;
+                &:nth-child(2),&:nth-child(3){
+                    display: none;
+                }
+            }
+        }
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            top: -55px;
+        }
+        p,h4,span{
+            line-height: 24px;
+        }
+        p{
+            padding-bottom: 24px;
+            border-bottom: 1px solid #DDDDDD;
+        }
+        h4{
+            margin-top: 24px;
+        }
+        .appraise{
+            margin-top: 8px;
+            @include lg-pc{
+                flex-direction: column;
+            }
+            @include pad{
+                flex-direction: row;
+            }
+        }
+        .stars {
+            width: 121px;
+            i{
+                color: $third;
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .pagination{
+            width: 70px;
+            margin-top: 24px;
+            .dot{
+                background: #DDDDDD;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+            .dot-y{
+                background: $third;
+                width: 16px;
+                height: 10px;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    .footer-content{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 140px;
+        width: 100%;
+        h3{
+            @include font-h3;
+            @include lg-pc{
+                font-size: 24px;
+                line-height: 35px;
+            }
+        }
+        .btn{
+            background: $primary;
+            color: $white;
+            width: 136px;
+            border-radius: 27px;
+            transition: all 0.5s;
+            padding: 12px 32px;
+            margin-top: 24px;
+            &:hover{
+                background: $secondary;
+            }
+        }
+    }
+}   

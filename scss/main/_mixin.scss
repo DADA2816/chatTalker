@@ -1,0 +1,45 @@
+@mixin hide-text {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@mixin bg-img-set {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@mixin font-h2{
+    font-size: $font-size-h2;
+    line-height: 70px;
+}
+@mixin font-h3 {
+    font-size: $font-size-h3;
+    line-height: 46px;
+}
+
+// media query
+@mixin xxl-pc{
+    @media (max-width:1400px) {
+        @content;
+    }
+}
+@mixin xl-pc{
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+@mixin lg-pc{
+    @media (max-width:992px) {
+        @content;
+    }
+}
+@mixin pad {
+    @media (max-width:768px) {
+        @content;
+    }
+}
+@mixin mob {
+    @media (max-width:576px) {
+        @content;
+    }
+}
